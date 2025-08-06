@@ -14,23 +14,20 @@
 
     <!-- NAVBAR -->
     <nav>
-
         <div class="logo">
             <img src="../assets/img/logo.jpg" alt="Logo ABC English Solutions" />
         </div>
         <div id="title">
             <h2>English Solutions</h2>
         </div>
-
     </nav>
 
     <section class="form-section">
         <div class="form-container">
             <h1>Agendar tu Clase Gratuita</h1>
-            <p>Llena el siguiente formulario y uno de nuestros coaches se pondrá en contacto contigo para confirmar tu
-                clase.</p>
+            <p>Llena el siguiente formulario y uno de nuestros coaches se pondrá en contacto contigo para confirmar tu clase.</p>
 
-            <form action="https://formspree.io/f/tu-id" method="POST">
+            <form id="formulario">
                 <label for="name">Nombre completo</label>
                 <input type="text" id="name" name="name" required>
 
@@ -51,15 +48,8 @@
                 <label for="message">¿Qué objetivo tienes con el inglés?</label>
                 <textarea id="message" name="message" rows="4"></textarea>
 
-
-
                 <button type="submit" class="btn-primary">Agendar clase</button>
             </form>
-
-            <!-- <div class="testimonial-blurb">
-                <p>💬 <em>“Gracias a la clase gratuita, me animé a tomar el programa completo. Súper útil.”</em> — Carla
-                    M.</p>
-            </div> -->
         </div>
     </section>
 
@@ -67,6 +57,34 @@
         <p>© 2025 ABC English Solutions · contacto@abcenglish.com</p>
         <p>Síguenos en redes sociales · Política de privacidad</p>
     </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyklsWcobeKigznho8AGhRMkRxFEsPh0qcSS0RldWneNxnc3NiO3RaJc2LKzqfxwZMW/exec';
+        const form = document.getElementById('formulario');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                alert("✅ Clase agendada correctamente. Te contactaremos pronto.");
+                form.reset();
+            })
+            .catch(error => {
+                alert("❌ Error al enviar el formulario. Intenta nuevamente más tarde.");
+                console.error("Error:", error);
+            });
+        });
+    </script>
 
 </body>
 
