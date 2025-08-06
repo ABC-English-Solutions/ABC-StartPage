@@ -22,7 +22,7 @@ body {
 header {
     background-color: var(--azul-marino);
     color: var(--blanco);
-    padding: 20px 20px 100px;
+    padding: 80px 20px 100px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -175,7 +175,26 @@ nav {
 }
 
 nav .logo img {
-    height: 20rem;
+    height: 5rem;
     width: auto;
-    border-radius: 5rem;
+    border-radius: 2rem;
+}
+.logo{
+    display: inline-block;
+}
+ul{
+    display: inline-block;
+    vertical-align:top;
+    padding: 2rem;
+    font-size: large;
+}
+nav ul li{
+    list-style: none;
+    color: var(--blanco);
+    display: inline-block;
+    padding-right: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--blanco);
 }
