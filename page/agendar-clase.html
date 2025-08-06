@@ -15,9 +15,11 @@
     <!-- NAVBAR -->
     <nav>
         <div class="logo">
-            <img src="../assets/img/logo.jpg" alt="Logo ABC English Solutions" />
+            <a href="../index.html">
+                <img src="../assets/img/logo.jpg" alt="Logo ABC English Solutions" />
+            </a>
         </div>
-        <div id="title">
+        <div id="titleAgenda">
             <h2>English Solutions</h2>
         </div>
     </nav>
@@ -25,7 +27,8 @@
     <section class="form-section">
         <div class="form-container">
             <h1>Agendar tu Clase Gratuita</h1>
-            <p>Llena el siguiente formulario y uno de nuestros coaches se pondrá en contacto contigo para confirmar tu clase.</p>
+            <p>Llena el siguiente formulario y uno de nuestros coaches se pondrá en contacto contigo para confirmar tu
+                clase.</p>
 
             <form id="formulario">
                 <label for="name">Nombre completo</label>
@@ -75,14 +78,14 @@
                     'Content-Type': 'application/json'
                 }
             })
-            .then(response => {
-                alert("✅ Clase agendada correctamente. Te contactaremos pronto.");
-                form.reset();
-            })
-            .catch(error => {
-                alert("❌ Error al enviar el formulario. Intenta nuevamente más tarde.");
-                console.error("Error:", error);
-            });
+                .then(response => {
+                    alert("✅ Clase agendada correctamente. Te contactaremos pronto.");
+                    form.reset();
+                })
+                .catch(error => {
+                    alert("❌ Error al enviar el formulario. Intenta nuevamente más tarde.");
+                    console.error("Error:", error);
+                });
         });
     </script>
 
