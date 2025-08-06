@@ -51,6 +51,7 @@ header p {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -200,4 +201,11 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: var(--blanco);
+}
+/* Hacer que el navbar permanezca en la parte superior */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #003366;
 }
