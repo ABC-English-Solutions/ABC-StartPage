@@ -73,5 +73,5 @@ form input, form textarea, form select {
     color: white;
     display: inline-block;
     vertical-align: top;
-    padding: 2rem;
+    padding: 2rem 0.5rem;
 }

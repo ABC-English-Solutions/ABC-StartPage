@@ -159,7 +159,9 @@ footer {
 .cta-link:hover {
     background-color: #e6b022;
 }
-
+#title{
+    display: none;
+}
 @media (max-width: 868px) {
     header h1 {
         font-size: 2rem;
@@ -168,8 +170,16 @@ footer {
     .section-title {
         font-size: 2rem;
     }
-    nav ul{
+
+    nav ul {
         display: none;
+    }
+
+    #title {
+        color: white;
+        display: inline-block;
+        vertical-align: top;
+        padding: 2rem 0.5rem;
     }
 }
 
@@ -183,29 +193,35 @@ nav .logo img {
     width: auto;
     border-radius: 2rem;
 }
-.logo{
+
+.logo {
     display: inline-block;
 }
-ul{
+
+ul {
     display: inline-block;
-    vertical-align:top;
+    vertical-align: top;
     padding: 2rem;
     font-size: large;
 }
-nav ul li{
+
+nav ul li {
     list-style: none;
     color: var(--blanco);
     display: inline-block;
     padding-right: 2rem;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: var(--blanco);
 }
+
 /* Hacer que el navbar permanezca en la parte superior */
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #003366;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #003366;
 }
+
